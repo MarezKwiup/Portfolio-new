@@ -99,7 +99,8 @@ const Projects = () => {
       description:
         "Generates short animation based on user prompt with voice overs and narration",
       technologies: ["Python", "LicaAPI", "FFMPeg", "TTS"],
-      liveUrl: "",
+      liveUrl:
+        "https://colab.research.google.com/drive/1rfwDsJqTru-cdJL27EiygmTh2oVaoRPM?usp=sharing",
       githubUrl: "",
       medium: "",
       featured: false,
@@ -199,7 +200,8 @@ const Projects = () => {
                   className="border-0 mt-1 rounded-lg flex items-center justify-center w-20 h-5 bg-[#E7F1FC] hover:bg-[#F4F5F7] text-[#0A2C55]"
                   initial={{ scale: 0.1 }}
                   animate={{ scale: 1 }}
-                  transition={{ delay: 1.2, duration: 0.6 }}
+                  transition={{ delay: 0.2, duration: 0.6 }}
+                  viewport={{ once: true }}
                 >
                   <span className="text-sm ">Featured</span>
                 </motion.div>
@@ -208,8 +210,9 @@ const Projects = () => {
                   <motion.div
                     className="border-0 mt-1 rounded-lg flex items-center justify-center w-22 h-5 bg-[#f8fbbc] hover:bg-[#F4F5F7] text-[#787204]"
                     initial={{ scale: 0.1 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 1.2, duration: 0.6 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ delay: 0.2, duration: 0.6 }}
+                    viewport={{ once: true }}
                   >
                     <span className="text-sm ">In Progress</span>
                   </motion.div>
@@ -219,12 +222,13 @@ const Projects = () => {
               <motion.p
                 className="text-[#68727E] text-lg mt-3 mb-3"
                 initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
+                whileInView={{ scale: 1 }}
                 transition={{
-                  delay: 1.2,
+                  delay: 0.2,
                   duration: 0.6,
                   ease: "easeOut",
                 }}
+                viewport={{ once: true }}
               >
                 {project.description}
               </motion.p>
@@ -235,12 +239,14 @@ const Projects = () => {
                     key={index}
                     className="mt-1 rounded-lg flex items-center justify-center p-2 border hover:scale-105 transform transition"
                     initial={{ scale: 0.1 }}
-                    animate={{ scale: 1 }}
+                    whileInView={{ scale: 1 }}
                     transition={{
                       delay: 0.1 * index,
+                      duration: 0.6,
                       type: "spring",
                       stiffness: 200,
                     }}
+                    viewport={{ once: true }}
                   >
                     <span className="text-sm font-semibold">{tech}</span>
                   </motion.div>
@@ -260,9 +266,9 @@ const Projects = () => {
                 {project.liveUrl !== "" && (
                   <motion.div
                     initial={{ scale: 0, y: 20 }}
-                    animate={{ scale: 1, y: 0 }}
+                    whileInView={{ scale: 1, y: 0 }}
                     transition={{
-                      delay: 1.2,
+                      delay: 0.2,
                       duration: 0.6,
                       type: "spring",
                     }}
@@ -271,7 +277,7 @@ const Projects = () => {
                     <a
                       href={project.liveUrl}
                       target="_blank"
-                      rel='noopener noreferrer'
+                      rel="noopener noreferrer"
                       className="inline-flex items-center justify-center border-0 rounded-md bg-[#0A2C55] h-10 px-6 hover:bg-[#264267] text-white hover:scale-105 transform transition gap-2"
                     >
                       <ExternalLink />
@@ -283,9 +289,9 @@ const Projects = () => {
                 {project.githubUrl !== "" && (
                   <motion.div
                     initial={{ scale: 0, y: 20 }}
-                    animate={{ scale: 1, y: 0 }}
+                    whileInView={{ scale: 1, y: 0 }}
                     transition={{
-                      delay: 1.4,
+                      delay: 0.3,
                       duration: 0.6,
                       type: "spring",
                     }}
@@ -293,7 +299,7 @@ const Projects = () => {
                   >
                     <a
                       href={project.githubUrl}
-                      target='_blank'
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center border-1 border-[#DDDFE5] rounded-md bg-[#FDFDFD] h-10 hover:text-white px-6 hover:bg-[#0A2C55] text-[#22262A] hover:scale-105 transform transition gap-2"
                     >
@@ -306,9 +312,9 @@ const Projects = () => {
                 {project.medium !== "" && (
                   <motion.div
                     initial={{ scale: 0, y: 20 }}
-                    animate={{ scale: 1, y: 0 }}
+                    whileInView={{ scale: 1, y: 0 }}
                     transition={{
-                      delay: 1.6,
+                      delay: 0.4,
                       duration: 0.6,
                       type: "spring",
                     }}
@@ -316,12 +322,165 @@ const Projects = () => {
                   >
                     <a
                       href={project.medium}
-                      target='_blank'
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center border-1 border-[#DDDFE5] rounded-md bg-[#FDFDFD] h-10 hover:text-white px-6 hover:bg-[#0A2C55] text-[#22262A] hover:scale-105 transform transition gap-2"
                     >
                       <SiMedium />
                       Blog Post
+                    </a>
+                  </motion.div>
+                )}
+              </motion.div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div
+          className="text-center mb-16"
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <motion.h2
+            className="text-3xl font-medium"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            Other Projects
+          </motion.h2>
+        </motion.div>
+
+        <motion.div
+          className="grid lg:grid-cols-3 gap-8 mb-12 lg:place-items-center"
+          variants={containerVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {otherProjects.map((project, index) => (
+            <motion.div
+              className="border rounded-sm border-[#DDDFE5] lg:w-[80%] lg:h-70 mx-6 p-5 flex flex-col"
+              key={index}
+              variants={cardVariants}
+              whileHover={{
+                y: -8,
+                scale: 1.02,
+                transition: { duration: 0.3 },
+              }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <motion.p
+                className="items-start text-lg font-semibold"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                {project.title}
+              </motion.p>
+
+              <motion.p
+                className="items-start text-md mt-3"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                {project.description}
+              </motion.p>
+
+              <motion.div
+                className="flex gap-3"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                {project.technologies.map((tech, index) => (
+                  <motion.div
+                    key={index}
+                    className="mt-3 rounded-lg flex items-center justify-center p-2 border hover:scale-105 transform transition"
+                  >
+                    <span className="text-sm">{tech}</span>
+                  </motion.div>
+                ))}
+              </motion.div>
+
+              <motion.div className="mt-3 flex gap-3">
+                {project.liveUrl !== "" && (
+                  <motion.div
+                    whileHover={{
+                      scale: 1.2,
+                      rotate: 5,
+                      transition: {
+                        duration: 0.2,
+                      },
+                    }}
+                    whileTap={{
+                      scale: 0.9,
+                    }}
+                  >
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:bg-[#c6def9] hover:text-white rounded-full border-0 flex h-10 w-10 items-center justify-center"
+                    >
+                      <ExternalLink size={20} />
+                    </a>
+                  </motion.div>
+                )}
+
+                {project.githubUrl !== "" && (
+                  <motion.div
+                    whileHover={{
+                      scale: 1.2,
+                      rotate: 5,
+                      transition: {
+                        duration: 0.2,
+                      },
+                    }}
+                    whileTap={{
+                      scale: 0.9,
+                    }}
+                    viewport={{ once: true }}
+                  >
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:bg-[#c6def9] hover:text-white rounded-full border-0 flex h-10 w-10 items-center justify-center"
+                    >
+                      <FaGithub size={20} />
+                    </a>
+                  </motion.div>
+                )}
+
+                {project.medium !== "" && (
+                  <motion.div
+                    whileHover={{
+                      scale: 1.2,
+                      rotate: 5,
+                      transition: {
+                        duration: 0.2,
+                      },
+                    }}
+                    whileTap={{
+                      scale: 0.9,
+                    }}
+                    viewport={{ once: true }}
+                  >
+                    <a
+                      href={project.medium}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:bg-[#c6def9] hover:text-white rounded-full border-0 flex h-10 w-10 items-center justify-center"
+                    >
+                      <SiMedium size={20} />
                     </a>
                   </motion.div>
                 )}

@@ -12,13 +12,9 @@ export default function Home() {
 
    <Projects/>
 
-    <section id='experience'>
-      <Experience/>
-    </section>  
+   <Experience/>
 
-    <section id='skills'>
-      <Skills/>
-    </section>
+    <Skills/>
 
     <section id='contact'>
       <Contact/>
