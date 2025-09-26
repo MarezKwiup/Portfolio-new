@@ -10,9 +10,7 @@ export default function Home() {
     
     <Hero/>
 
-    <section id='projects'>
-      <Projects/>
-    </section>
+   <Projects/>
 
     <section id='experience'>
       <Experience/>
