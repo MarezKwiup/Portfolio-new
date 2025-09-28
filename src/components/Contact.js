@@ -55,10 +55,10 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-[#F9FAFB]">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className=" mt-10 text-4xl font-bold mb-4">Let's Work Together</h2>
+          <h2 className=" mt-10 text-4xl font-bold mb-4">Let&apos;s Work Together</h2>
           <p className="text-lg max-w-2xl mx-auto text-[#68727E]">
-            I'm always interested in new opportunities and exciting projects.
-            Let's discuss how we can bring your ideas to life.
+            I&apos;m always interested in new opportunities and exciting projects.
+            Let&apos;s discuss how we can bring your ideas to life.
           </p>
         </div>
 
@@ -68,7 +68,7 @@ const Contact = () => {
             <CardHeader>
               <CardTitle className="text-2xl">Send me a message</CardTitle>
               <p className="text-[#68727E]">
-                Fill out the form below and I'll get back to you within 24
+                Fill out the form below and I&apos;ll get back to you within 24
                 hours.
               </p>
             </CardHeader>

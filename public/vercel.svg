@@ -1,1 +1,7 @@
-<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1155 1000"><path d="m577.3 0 577.4 1000H0z" fill="#fff"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#0A2C55"/>
+  <text x="50%" y="55%" text-anchor="middle" fill="white"
+        font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">
+    VS
+  </text>
+</svg>

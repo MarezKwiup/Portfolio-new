@@ -96,7 +96,7 @@ const Experience = () => {
             viewport={{ once: true }}
           >
             My professional journey in software development, showcasing growth,
-            achievements, and the technologies I've mastered along the way.
+            achievements, and the technologies I&apos;ve mastered along the way.
           </motion.p>
         </motion.div>
 

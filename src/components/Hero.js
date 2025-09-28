@@ -53,7 +53,7 @@ const Hero = () => {
         {/* Left side: hero text */}
         <div className="mt-15 flex flex-col items-left justify-start text-start px-4 ml-10 space-y-4">
           <p className="text-lg text-[#0A2C55] mt-10">
-            Hello, I'm Vardan Sharma
+            Hello, I&apos;m Vardan Sharma
           </p>
           <p className="text-5xl font-bold mb-4 text-[#22262A]">Software</p>
           <p className="text-5xl font-bold mb-4 text-[#0A2C55]">Developer</p>
