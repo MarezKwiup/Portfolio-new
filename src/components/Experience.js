@@ -79,7 +79,7 @@ const Experience = () => {
           viewport={{ once: true }}
         >
           <motion.h2
-            className="text-4xl font-semibold mb-4 text-[#22262A]"
+            className="text-4xl mt-10 font-semibold mb-4 text-[#22262A]"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}

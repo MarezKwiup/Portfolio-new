@@ -40,7 +40,7 @@ const Hero = () => {
     },
   ];
   return (
-    <section className="relative min-h-screen w-full">
+    <section id='hero' className="relative min-h-screen w-full">
       {/* Background image */}
       <img
         src="/hero-bg.jpg"
@@ -51,7 +51,7 @@ const Hero = () => {
       {/* Overlay content */}
       <div className="relative flex flex-col md:flex-row items-start md:items-center  md:justify-center px-4 md:px-12">
         {/* Left side: hero text */}
-        <div className="flex flex-col items-left justify-start text-start px-4 ml-10 space-y-4">
+        <div className="mt-15 flex flex-col items-left justify-start text-start px-4 ml-10 space-y-4">
           <p className="text-lg text-[#0A2C55] mt-10">
             Hello, I'm Vardan Sharma
           </p>
@@ -178,7 +178,7 @@ const Hero = () => {
         {/* Right side: quick stats */}
 
         <motion.div
-          className="flex h-90 flex-col w-full md:w-[35%] mt-20 md:mt-20 bg-white z-10 p-8 border-[#DDDFE5] rounded-sm mb-40 justify-between"
+          className="flex h-90 flex-col w-full md:w-[35%] mt-35 md:mt-35 bg-white z-10 p-8 border-[#DDDFE5] rounded-sm mb-40 justify-between"
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{

@@ -55,7 +55,7 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-[#F9FAFB]">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Let's Work Together</h2>
+          <h2 className=" mt-10 text-4xl font-bold mb-4">Let's Work Together</h2>
           <p className="text-lg max-w-2xl mx-auto text-[#68727E]">
             I'm always interested in new opportunities and exciting projects.
             Let's discuss how we can bring your ideas to life.
@@ -171,6 +171,12 @@ const Contact = () => {
                     </div>
                   </a>
                 ))}
+              </CardContent>
+            </Card>
+
+            <Card className="">
+              <CardContent className="space-y-4">
+                <a href='https://github.com/MarezKwiup/Portfolio-new' target="_blank" rel="noopener noreferrer" className="block w-full p-2 border-0 rounded-md items-center bg-[#0A2C56] text-white hover:bg-[#264166] py-3">Code for this portfolio</a>
               </CardContent>
             </Card>
           </div>

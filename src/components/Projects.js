@@ -145,7 +145,7 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <motion.h2
-            className="text-5xl font-semibold"
+            className="text-5xl mt-20 font-semibold"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
